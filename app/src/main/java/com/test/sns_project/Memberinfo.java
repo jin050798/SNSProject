@@ -17,6 +17,12 @@ public class Memberinfo {
         this.address = address;
         this.photoUrl = photoUrl;
     }
+    public Memberinfo(String name, String phoneNumber, String birthDay, String address){
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.birthDay = birthDay;
+        this.address = address;
+    }
 
     public String getPhotoUrl() {
         return photoUrl;

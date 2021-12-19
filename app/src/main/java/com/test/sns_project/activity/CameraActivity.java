@@ -1,6 +1,6 @@
 
 
-package com.test.sns_project;
+package com.test.sns_project.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,12 +11,15 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.test.sns_project.R;
+import com.test.sns_project.fragment.Camera2BasicFragment;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-public class CameraActivity extends AppCompatActivity {
+public class CameraActivity extends BasicActivity {
 
     //private Camera2BasicFragment camera2BasicFragme;
 

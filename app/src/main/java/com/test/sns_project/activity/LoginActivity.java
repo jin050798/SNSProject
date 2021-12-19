@@ -1,4 +1,4 @@
-package com.test.sns_project;
+package com.test.sns_project.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.test.sns_project.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BasicActivity {
     private FirebaseAuth mAuth;
 
 
@@ -56,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("로그인에 성공하였습니다.");
-                                myStartActivity(MainActivity.class);
+                                myStartActivity(levelActivity.class);
                             } else {
                                 if(task.getException()!= null){
                                     startToast(task.getException().toString());
