@@ -57,7 +57,9 @@ public class LoginActivity extends BasicActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("로그인에 성공하였습니다.");
-                                myStartActivity(levelActivity.class);
+                                Intent intent = new Intent(LoginActivity.this,levelActivity.class);
+                                intent.putExtra("data",1);
+                                startActivity(intent);
                             } else {
                                 if(task.getException()!= null){
                                     startToast(task.getException().toString());
